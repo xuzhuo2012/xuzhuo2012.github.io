@@ -11,13 +11,15 @@ body {
 
 div {
 	margin:0 auto; 
-	width:400px; 	
+	width:80%;
+	height:300px
 	border:1px solid #f00;
 }
 
 button {
 	background-color: #666;
-	width:380px;
+	margin:0 auto; 
+	width:80%;
 	height:50px;
 }
 
@@ -52,6 +54,13 @@ function clickBtn(key)
 			break;
 		case 'kelper':
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}';
+			break;
+		case 'cart':
+			console.log(key);
+			window.location.href='openapp.toplife://virtual?params={"des":"cart"}';
+			break;
+		case 'share':
+			window.location.href='openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}';
 			break;
 		default:
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
@@ -106,6 +115,20 @@ function clickBtn(key)
 	<p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
 	<h1>
 		<button onclick="clickBtn('kelper')" >kelper</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"cart"}</p>
+	<h1>
+		<button onclick="clickBtn('cart')" >cart</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}</p>
+	<h1>
+		<button onclick="clickBtn('share')" >share</button>
 	</h1>
 </div>
 
