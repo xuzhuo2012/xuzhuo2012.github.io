@@ -4,45 +4,102 @@
 <body>
 
 
+<style type="text/css">
+body { 
+	text-align:center
+} 
 
-<p>openapp.toplife://virtual?params={'des':'home','params':{'index':0}}</p>
-<h1>
-    <a onclick ='clickHome()' >Home</a>
-</h1>
-
-<p>openapp.toplife://virtual?params={'des':'detail','params':{'skuId':5085839}}</p>
-<h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"detail\",\"params\":{\"skuId\":5085839}}'>Detail</a>
-</h1>
-
-<p>openapp.toplife://virtual?params={'des':'shop','params':{'shop_page_id':716367}}</p>
-<h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"shop\",\"params\":{\"shop_page_id\":716367}}'>Shop</a>
-</h1>
-
-<p>
-    openapp.toplife://virtual?params={'des':'web','params':{'url':'http://www.baidu.com/','title':'baidu'}}</p>
-<h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"web\",\"params\":{\"url\":\"http://www.baidu.com/\",\"title\":\"baidu\"}}'>Web</a>
-</h1>
-
-
-<p>openapp.toplife://virtual?params={'des':'search','params':{'keyword':'T恤'}}</p>
-<h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"search\",\"params\":{\"keyword\":\"T恤\"}}'>Search</a>
-</h1>
-
-<p>openapp.toplife://virtual?params={'des':'home','params':{'index':'0'},'kepler_param':{'source':'kepler-open','otherData':{'mopenbp5':'ceshi'},'channel':'7ac94770f7574f00a401657d8c9ac40d'},'unpl':'V_ceshishujuwuxiao'}</p>
-<h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"home\",\"params\":{\"index\":\"0\"},\"kepler_param\":{\"source\":\"kepler-open\",\"otherData\":{\"mopenbp5\":\"ceshi\"},\"channel\":\"7ac94770f7574f00a401657d8c9ac40d\"},\"unpl\":\"V_ceshishujuwuxiao\"}'>开普勒参数</a>
-</h1>
-<script>
-
-function clickHome(){
-	window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}'
+div {
+	margin:0 auto; 
+	width:400px; 	
+	border:1px solid #f00;
 }
 
-// window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}'
+button {
+	background-color: #666;
+	width:380px;
+	height:50px;
+}
+
+
+</style>
+
+<script>
+
+
+function clickBtn(key)
+{
+	console.log(key);
+	switch(key)
+	{
+		case 'home':
+			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
+			break;
+		case 'detail':
+			window.location.href='openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}';
+			break;
+		case 'shop':
+			window.location.href='openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}';
+			break;
+		case 'web':
+			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}';
+			break;	
+		case 'search':
+			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}';
+			break;
+		case 'kelper':
+			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}';
+			break;
+		default:
+			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
+	}	
+}
 </script>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"home","params":{"index":0}}</p>
+	<h1>
+		<button onclick="clickBtn('home')" >Home</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}</p>
+	<h1>
+		<button onclick="clickBtn('detail')" >detail</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}</p>
+	<h1>
+		<button onclick="clickBtn('shop')" >shop</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}</p>
+	<h1>
+		<button onclick="clickBtn('web')" >web</button>
+	</h1>
+</div>
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}</p>
+	<h1>
+		<button onclick="clickBtn('search')" >search</button>
+	</h1>
+</div>
+
+
+<div>
+	<p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
+	<h1>
+		<button onclick="clickBtn('kelper')" >kelper</button>
+	</h1>
+</div>
+
+
+
 </body>
 </html>
