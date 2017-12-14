@@ -7,7 +7,7 @@
 
 <p>openapp.toplife://virtual?params={'des':'home','params':{'index':0}}</p>
 <h1>
-    <a href='openapp.toplife://virtual?params={\"des\":\"home\",\"params\":{\"index\":0}}'>Home</a>
+    <a onclick ='clickHome()' >Home</a>
 </h1>
 
 <p>openapp.toplife://virtual?params={'des':'detail','params':{'skuId':5085839}}</p>
@@ -38,7 +38,11 @@
 </h1>
 <script>
 
-window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}'
+function clickHome(){
+	window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}'
+}
+
+// window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}'
 </script>
 </body>
 </html>
