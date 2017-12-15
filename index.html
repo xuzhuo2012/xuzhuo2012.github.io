@@ -3,7 +3,6 @@
 <html>
 <body>
 
-
 <style type="text/css">
 body { 
 	text-align:center
@@ -11,24 +10,25 @@ body {
 
 div {
 	margin:0 auto; 
-	width:80%;
-	height:300px
-	border:1px solid #f00;
+	width:100%;
+	min-height:300px;
+	border:3px solid #f00;
+}
+
+div p {
+	margin:0 auto; 
 }
 
 button {
-	background-color: #666;
+	background-color: #0f0;
 	margin:0 auto; 
-	width:80%;
-	height:50px;
+	width:100%;
+	min-height:80px;
+	font-size:48px;
 }
-
-
 </style>
 
 <script>
-
-
 function clickBtn(key)
 {
 	console.log(key);
@@ -38,7 +38,7 @@ function clickBtn(key)
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
 			break;
 		case 'detail':
-			window.location.href='openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}';
+			window.location.href='openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}';
 			break;
 		case 'shop':
 			window.location.href='openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}';
@@ -47,7 +47,7 @@ function clickBtn(key)
 			window.location.href='openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}';
 			break;
 		case 'web':
-			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}';
+			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://xuzhuo2012.github.io/","title":"baidu"}}';
 			break;	
 		case 'search':
 			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}';
@@ -64,84 +64,155 @@ function clickBtn(key)
 		case 'live':
 			window.location.href='openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}';
 			break;
+		case 'videoplay':
+			window.location.href='openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"http://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/4564972818608344618/v.f20.mp4"}}';
+			break;
+		case 'orderlist':
+			window.location.href='openapp.toplife://virtual?params={"des":"orderlist"}';
+			break;
 		default:
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
 	}	
 }
+
 </script>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"home","params":{"index":0}}</p>
-	<h1>
-		<button onclick="clickBtn('home')" >Home</button>
-	</h1>
+	<h1>打开首页</h1>
+	
+	<h2>参数</h2>
+	
+	<table>
+		<tr><td>参数名</td> <td>说明    </td></tr>
+		<tr><td>index </td> <td>0 为首页</td></tr>
+	</table>
+	
+    <p>openapp.toplife://virtual?params={"des":"home","params":{"index":0}}</p>
+    
+    <button onclick="clickBtn('home')">Home</button>   
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}</p>
-	<h1>
-		<button onclick="clickBtn('detail')" >detail</button>
-	</h1>
+	<h1>商品详情页</h1>
+	
+	<h2>参数</h2>
+	
+    <p>openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}</p>
+	
+    <button onclick="clickBtn('detail')">detail</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}</p>
-	<h1>
-		<button onclick="clickBtn('shop')" >shop</button>
-	</h1>
+	<h1>店铺页</h1>
+	
+	<h2>参数</h2>
+	
+    <p>openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}</p>
+
+    <button onclick="clickBtn('shop')">shop</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}</p>
-	<h1>
-		<button onclick="clickBtn('shopcategory')" >shopcategory</button>
-	</h1>
+	<h1>店铺分类页</h1>
+	
+	<h2>参数</h2>
+	
+    <p>openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}</p>
+
+    <button onclick="clickBtn('shopcategory')">shopcategory</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}</p>
-	<h1>
-		<button onclick="clickBtn('web')" >web</button>
-	</h1>
+	<h1>内嵌网页（cms）</h1>
+	
+	<h2>参数</h2>
+	
+    <p>openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}</p>
+   
+    <button onclick="clickBtn('web')">web</button>
+  
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}</p>
-	<h1>
-		<button onclick="clickBtn('search')" >search</button>
-	</h1>
+	<h1>搜索页</h1>
+	
+	<h2>参数</h2>	
+
+    <p>openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}</p>
+
+    <button onclick="clickBtn('search')">search</button>
+   
 </div>
 
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
-	<h1>
-		<button onclick="clickBtn('kelper')" >kelper</button>
-	</h1>
+	<h1>首页（开普勒参数）</h1>
+	
+	<h2>参数</h2>	
+
+    <p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
+
+    <button onclick="clickBtn('kelper')">kelper</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"cart"}</p>
-	<h1>
-		<button onclick="clickBtn('cart')" >cart</button>
-	</h1>
+	<h1>购物车</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"cart"}</p>
+
+    <button onclick="clickBtn('cart')">cart</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}</p>
-	<h1>
-		<button onclick="clickBtn('share')" >share</button>
-	</h1>
+	<h1>分享</h1>
+	
+	<h2>参数</h2>	
+
+    <p>openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}</p>
+
+    <button onclick="clickBtn('share')">share</button>
+
 </div>
 
 <div>
-	<p>openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}</p>
-	<h1>
-		<button onclick="clickBtn('live')" >直播</button>
-	</h1>
+	<h1>直播页面</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}</p>
+ 
+    <button onclick="clickBtn('live')">直播</button>
+  
 </div>
 
+<div>
+	<h1>视频播放器</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"http://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/4564972818608344618/v.f20.mp4"}}</p>
 
+    <button onclick="clickBtn('videoplay')">视频播放</button>
+
+</div>
+
+<div>
+	<h1>订单列表页</h1>
+	
+	<h2>参数</h2>	
+
+    <p>openapp.toplife://virtual?params={"des":"orderlist"}</p>
+
+    <button onclick="clickBtn('orderlist')">我的订单</button>
+
+</div>
 
 </body>
 </html>
