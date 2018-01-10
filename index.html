@@ -45,7 +45,10 @@ function clickBtn(key)
 			window.location.href='openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}';
 			break;
 		case 'web':
-			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://mbeta.toplife.com/acs.html?id=508","title":"baidu"}}';
+			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://mbeta.toplife.com/acs.html?id=508","title":"baidu"}}';
+			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/mk.html","title":"MK"}}';
+			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/ysl.html","title":"MK"}}';	
+			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/acs.html?id=236","title":"236"}}';
 			break;		
 		case 'search':
 			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}';
@@ -77,6 +80,10 @@ function clickBtn(key)
 		case 'dail':
 			console.log(key);
 			window.location.href='openapp.toplife://virtual?params={"des":"dail","params":{"tel":"4006183638"}}';
+			break;
+		case 'scan':
+			console.log(key);
+			window.location.href='openapp.toplife://virtual?params={"des":"scan"}';
 			break;
 		default:
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
@@ -255,6 +262,17 @@ function clickBtn(key)
     <p>openapp.toplife://virtual?params={"des":"dail"，"params":{"tel":"4006183638"}}</p>
 
     <button onclick="clickBtn('dail')">拨打电话</button>
+
+</div>
+
+<div>
+	<h1>扫一扫</h1>
+	
+	<h2>参数</h2>	
+
+    <p>openapp.toplife://virtual?params={"des":"scan"}</p>
+
+    <button onclick="clickBtn('scan')">扫一扫</button>
 
 </div>
 
