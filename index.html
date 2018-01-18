@@ -68,6 +68,12 @@ function clickBtn(key)
 		case 'share':
 			window.location.href='openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}';
 			break;
+		case 'videocenter':
+			window.location.href='openapp.toplife://virtual?params={"des":"videocenter"}';
+			break;
+		case 'vod':
+			window.location.href='openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"95599"}}';
+			break;
 		case 'live':
 			window.location.href='openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}';
 			break;
@@ -222,9 +228,31 @@ function clickBtn(key)
 </div>
 
 <div>
-	<h1>直播页面</h1>
+	<h1>视频中心</h1>
 	
 	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"videocenter"}</p>
+ 
+    <button onclick="clickBtn('videocenter')">视频中心</button>
+  
+</div>
+
+<div>
+	<h1>回放页面</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"mstone_9119"}}</p>
+ 
+    <button onclick="clickBtn('vod')">回放</button>
+  
+</div>
+
+<div>
+	<h1>直播页面</h1>
+	
+	<h2>参数  roomNumber  </h2>	
 	
     <p>openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}</p>
  
