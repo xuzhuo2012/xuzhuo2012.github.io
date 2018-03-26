@@ -32,6 +32,12 @@ function clickBtn(key)
 	console.log(key);
 	switch(key)
 	{
+		case 'ask4service0':
+			window.location.href='openapp.toplife://virtual?params={"des":"ask4service","params":{"type":0}}';
+			break;
+		case 'ask4service1':
+			window.location.href='openapp.toplife://virtual?params={"des":"ask4service","params":{"type":1}}';
+			break;
 		case 'home':
 			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
 			break;
@@ -97,6 +103,30 @@ function clickBtn(key)
 }
 
 </script>
+
+
+
+<div>
+	<h1>申请售后</h1>
+	
+	<h2>参数</h2>
+	
+	<table>
+		<tr><td>参数名</td> <td>说明    </td></tr>
+		<tr><td>type </td> <td>0 ：我的申请</td></tr>
+		<tr><td>type </td> <td>1 ：我要申请</td></tr>
+	</table>
+	
+    <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":0}}</p>
+    
+    <button onclick="clickBtn('ask4service0')">我的申请</button>   
+	
+	
+    <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":1}}</p>
+    
+    <button onclick="clickBtn('ask4service1')">我要申请</button>   
+</div>
+
 
 <div>
 	<h1>打开首页</h1>
