@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-
-<html>
-<body>
+<!-- saved from url=(0029)https://xuzhuo2012.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
 
 <style type="text/css">
 body { 
@@ -32,6 +31,12 @@ function clickBtn(key)
 	console.log(key);
 	switch(key)
 	{
+		case 'couponlist':
+			window.location.href='openapp.toplife://virtual?params={"des":"couponlist"}';
+			break;
+		case 'searchhistory':
+			window.location.href='openapp.toplife://virtual?params={"des":"searchhistory"}';
+			break;
 		case 'ask4service0':
 			window.location.href='openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"0"}}';
 			break;
@@ -54,7 +59,7 @@ function clickBtn(key)
 			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://mbeta.toplife.com/acs.html?id=508","title":"baidu"}}';
 			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/mk.html","title":"MK"}}';
 			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/ysl.html","title":"MK"}}';	
-			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/acs.html?id=236","title":"236"}}';
+			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/acs.html?id=732","title":"236"}}';
 			break;		
 		case 'search':
 			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}';
@@ -81,10 +86,10 @@ function clickBtn(key)
 			window.location.href='openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"95599"}}';
 			break;
 		case 'live':
-			window.location.href='openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}';
+			window.location.href='openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"176379"}}';
 			break;
 		case 'videoplay':
-			window.location.href='openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"http://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/4564972818608344618/v.f20.mp4"}}';
+			window.location.href='openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"https://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/7447398155482357975/v.f230.m3u8"}}';
 			break;
 		case 'orderlist':
 			window.location.href='openapp.toplife://virtual?params={"des":"orderlist"}';
@@ -104,6 +109,27 @@ function clickBtn(key)
 
 </script>
 
+<div>
+	<h1>抵用券列表页</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"couponlist"}</p>
+
+    <button onclick="clickBtn(&#39;couponlist&#39;)">couponlist</button>
+
+</div>
+
+<div>
+	<h1>搜索历史</h1>
+	
+	<h2>参数</h2>	
+	
+    <p>openapp.toplife://virtual?params={"des":"searchhistory"}</p>
+
+    <button onclick="clickBtn(&#39;searchhistory&#39;)">searchhistory</button>
+
+</div>
 
 
 <div>
@@ -112,19 +138,19 @@ function clickBtn(key)
 	<h2>参数</h2>
 	
 	<table>
-		<tr><td>参数名</td> <td>说明    </td></tr>
+		<tbody><tr><td>参数名</td> <td>说明    </td></tr>
 		<tr><td>type </td> <td>0 ：我的申请</td></tr>
 		<tr><td>type </td> <td>1 ：我要申请</td></tr>
-	</table>
+	</tbody></table>
 	
     <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"0"}}</p>
     
-    <button onclick="clickBtn('ask4service0')">我的申请</button>   
+    <button onclick="clickBtn(&#39;ask4service0&#39;)">我的申请</button>   
 	
 	
     <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"1"}}</p>
     
-    <button onclick="clickBtn('ask4service1')">我要申请</button>   
+    <button onclick="clickBtn(&#39;ask4service1&#39;)">我要申请</button>   
 </div>
 
 
@@ -134,13 +160,13 @@ function clickBtn(key)
 	<h2>参数</h2>
 	
 	<table>
-		<tr><td>参数名</td> <td>说明    </td></tr>
+		<tbody><tr><td>参数名</td> <td>说明    </td></tr>
 		<tr><td>index </td> <td>0 为首页</td></tr>
-	</table>
+	</tbody></table>
 	
     <p>openapp.toplife://virtual?params={"des":"home","params":{"index":0}}</p>
     
-    <button onclick="clickBtn('home')">Home</button>   
+    <button onclick="clickBtn(&#39;home&#39;)">Home</button>   
 </div>
 
 <div>
@@ -150,7 +176,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}</p>
 	
-    <button onclick="clickBtn('detail')">detail</button>
+    <button onclick="clickBtn(&#39;detail&#39;)">detail</button>
 
 </div>
 
@@ -161,7 +187,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}</p>
 
-    <button onclick="clickBtn('shop')">shop</button>
+    <button onclick="clickBtn(&#39;shop&#39;)">shop</button>
 
 </div>
 
@@ -172,7 +198,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}</p>
 
-    <button onclick="clickBtn('shopcategory')">shopcategory</button>
+    <button onclick="clickBtn(&#39;shopcategory&#39;)">shopcategory</button>
 
 </div>
 
@@ -183,7 +209,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}</p>
    
-    <button onclick="clickBtn('web')">web</button>
+    <button onclick="clickBtn(&#39;web&#39;)">web</button>
   
 </div>
 
@@ -211,15 +237,15 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}</p>
 
-    <button onclick="clickBtn('search')">关键词搜索</button>
+    <button onclick="clickBtn(&#39;search&#39;)">关键词搜索</button>
 	
 	<p>openapp.toplife://virtual?params={"des":"search","params":{"from":"brand","venderId":"7677037","shopId":"1000094508"}}</p>
 	
-	<button onclick="clickBtn('search_brand')">搜索店铺商品</button>
+	<button onclick="clickBtn(&#39;search_brand&#39;)">搜索店铺商品</button>
 	
 	<p>openapp.toplife://virtual?params={"des":"search","params":{"from":"category","cid1":"1","cid2":"14240","cid3":"14240","fid":"14239","cateName":"男士服饰"}}</p>
 	
-	<button onclick="clickBtn('search_category')">类目搜索</button>
+	<button onclick="clickBtn(&#39;search_category&#39;)">类目搜索</button>
    
 </div>
 
@@ -231,7 +257,7 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
 
-    <button onclick="clickBtn('kelper')">kelper</button>
+    <button onclick="clickBtn(&#39;kelper&#39;)">kelper</button>
 
 </div>
 
@@ -242,7 +268,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"cart"}</p>
 
-    <button onclick="clickBtn('cart')">cart</button>
+    <button onclick="clickBtn(&#39;cart&#39;)">cart</button>
 
 </div>
 
@@ -253,7 +279,7 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}</p>
 
-    <button onclick="clickBtn('share')">share</button>
+    <button onclick="clickBtn(&#39;share&#39;)">share</button>
 
 </div>
 
@@ -264,7 +290,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"videocenter"}</p>
  
-    <button onclick="clickBtn('videocenter')">视频中心</button>
+    <button onclick="clickBtn(&#39;videocenter&#39;)">视频中心</button>
   
 </div>
 
@@ -275,7 +301,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"mstone_9119"}}</p>
  
-    <button onclick="clickBtn('vod')">回放</button>
+    <button onclick="clickBtn(&#39;vod&#39;)">回放</button>
   
 </div>
 
@@ -286,7 +312,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}</p>
  
-    <button onclick="clickBtn('live')">直播</button>
+    <button onclick="clickBtn(&#39;live&#39;)">直播</button>
   
 </div>
 
@@ -297,7 +323,7 @@ function clickBtn(key)
 	
     <p>openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"http://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/4564972818608344618/v.f20.mp4"}}</p>
 
-    <button onclick="clickBtn('videoplay')">视频播放</button>
+    <button onclick="clickBtn(&#39;videoplay&#39;)">视频播放</button>
 
 </div>
 
@@ -308,7 +334,7 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"orderlist"}</p>
 
-    <button onclick="clickBtn('orderlist')">我的订单</button>
+    <button onclick="clickBtn(&#39;orderlist&#39;)">我的订单</button>
 
 </div>
 
@@ -319,7 +345,7 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"dail"，"params":{"tel":"4006183638"}}</p>
 
-    <button onclick="clickBtn('dail')">拨打电话</button>
+    <button onclick="clickBtn(&#39;dail&#39;)">拨打电话</button>
 
 </div>
 
@@ -330,9 +356,9 @@ function clickBtn(key)
 
     <p>openapp.toplife://virtual?params={"des":"scan"}</p>
 
-    <button onclick="clickBtn('scan')">扫一扫</button>
+    <button onclick="clickBtn(&#39;scan&#39;)">扫一扫</button>
 
 </div>
 
-</body>
-</html>
+
+</body></html>
