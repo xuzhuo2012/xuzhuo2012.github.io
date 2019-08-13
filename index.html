@@ -1,364 +1,448 @@
 <!DOCTYPE html>
-<!-- saved from url=(0029)https://xuzhuo2012.github.io/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
-
-<style type="text/css">
-body { 
-	text-align:center;
-} 
-
-div {
-	margin:0 auto; 
-	width:100%;
-	min-height:300px;
-	border:3px solid #f00;
-	word-break:break-all; 
-	word-wrap:break-word ;
-}
-
-button {
-	background-color: #0f0;
-	margin:0 auto; 
-	width:100%;
-	min-height:80px;
-	font-size:48px;
-}
-</style>
-
-<script>
-function clickBtn(key)
-{
-	console.log(key);
-	switch(key)
-	{
-		case 'couponlist':
-			window.location.href='openapp.toplife://virtual?params={"des":"couponlist"}';
-			break;
-		case 'searchhistory':
-			window.location.href='openapp.toplife://virtual?params={"des":"searchhistory"}';
-			break;
-		case 'ask4service0':
-			window.location.href='openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"0"}}';
-			break;
-		case 'ask4service1':
-			window.location.href='openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"1"}}';
-			break;
-		case 'home':
-			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
-			break;
-		case 'detail':
-			window.location.href='openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}';
-			break;
-		case 'shop':
-			window.location.href='openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}';
-			break;
-		case 'shopcategory':
-			window.location.href='openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}';
-			break;
-		case 'web':
-			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://mbeta.toplife.com/acs.html?id=508","title":"baidu"}}';
-			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/mk.html","title":"MK"}}';
-			// window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/ysl.html","title":"MK"}}';	
-			window.location.href='openapp.toplife://virtual?params={"des":"web","params":{"url":"http://m.toplife.com/acs.html?id=732","title":"236"}}';
-			break;		
-		case 'search':
-			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}';
-			break;
-		case 'search_brand':
-			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"from":"brand","venderId":"7677037","shopId":"1000094508"}}';
-			break;
-		case 'search_category':
-			window.location.href='openapp.toplife://virtual?params={"des":"search","params":{"from":"category","cid1":"1","cid2":"14240","cid3":"14240","fid":"14239","cateName":"男士服饰"}}';
-			break;
-		case 'kelper':
-			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}';
-			break;
-		case 'cart':
-			window.location.href='openapp.toplife://virtual?params={"des":"cart"}';
-			break;
-		case 'share':
-			window.location.href='openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}';
-			break;
-		case 'videocenter':
-			window.location.href='openapp.toplife://virtual?params={"des":"videocenter"}';
-			break;
-		case 'vod':
-			window.location.href='openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"95599"}}';
-			break;
-		case 'live':
-			window.location.href='openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"176379"}}';
-			break;
-		case 'videoplay':
-			window.location.href='openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"https://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/7447398155482357975/v.f230.m3u8"}}';
-			break;
-		case 'orderlist':
-			window.location.href='openapp.toplife://virtual?params={"des":"orderlist"}';
-			break;
-		case 'dail':
-			console.log(key);
-			window.location.href='openapp.toplife://virtual?params={"des":"dail","params":{"tel":"4006183638"}}';
-			break;
-		case 'scan':
-			console.log(key);
-			window.location.href='openapp.toplife://virtual?params={"des":"scan"}';
-			break;
-		default:
-			window.location.href='openapp.toplife://virtual?params={"des":"home","params":{"index":0}}';
-	}	
-}
-
-</script>
-
-<div>
-	<h1>抵用券列表页</h1>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Author Meta -->
+        <meta name="author" content="Themefisher">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="utf-8">
+        <!-- Site Title -->
+        <title>Quick</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="img/icons/">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:200,300,400,700,900,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,900,700,500,300' rel='stylesheet' type='text/css'>
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/justifiedGallery.min.css">
+        <link rel="stylesheet" href="css/et-font.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/main.css">
+		
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->		
+    </head>
 	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"couponlist"}</p>
+    <body>
+        <!-- #preloader -->
+        <!-- end #preloader -->
+        <!-- #preloader -->
+        <div id="preloader">
+            <div class="preloader loading">
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+                <span class="slice"></span>
+            </div>
+        </div>
+        <!-- end #preloader -->
+        <header class="site-header navbar-fixed-top navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+                
+                <div class="nav-toggle hidden-xs">
+                    <button class="toggle-btn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-    <button onclick="clickBtn(&#39;couponlist&#39;)">couponlist</button>
+                <nav class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav main-manu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav><!-- /.navbar-collapse -->
+            </div>
+        </header>
 
-</div>
+        <div class="home-banner fullscreen" >
+            <div class="gradient"></div>
+            <div class="banner-content dtable fullscreen">
+                <div class="content-inner dtablecell">
+                    <div class="container">
+                        <h1>Angelisa Easter</h1>
+                        <p>User Interface Story Teller</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div>
-	<h1>搜索历史</h1>
-	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"searchhistory"}</p>
+        <!-- about -->
+        <div id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-5 wow fadeInLeft">
+                        <div class="author-thumb text-center">
+                            <img src="img/author.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-7 wow fadeInRight">
+                        <div class="about-intro">
+                            <h3>MY NAME IS Angelisa Easter.</h3>
+                            <h5>Angelisa Easter Lisa, 28 years young, born and grew up in Australia, Grand Line. Highly motivated creative designer with international client portfolio.</h5>
+                            <span class="divider"></span>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquipex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // about -->
+        <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >建站模板</a></div>
 
-    <button onclick="clickBtn(&#39;searchhistory&#39;)">searchhistory</button>
+        <!-- process -->
+        <div id="process" class="process section">
+            <div class="container">
+                <div class="row">
+                    <div class="title">
+                        <h2>My Working Process</h2>
+                        <p>A wonderful serenity has taken possession of my entire soul,<br> like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    </div>
+                    
+                    <div class="proecess-block col-xs-12 col-sm-6 col-md-4">
+                        <div class="process-inner">
+                            <div class="icon-holder">
+                                <i class="icon-telescope"></i>
 
-</div>
+                            </div>
+                            <h4 class="heading">Design</h4>
+                            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="proecess-block col-xs-12 col-sm-6 col-md-4">
+                        <div class="process-inner">
+                            <div class="icon-holder">
+                                <i class="icon-mobile"></i>
+                            </div>
+                            <h4 class="heading">Development</h4>
+                            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="proecess-block col-xs-12 col-sm-6 col-md-4 ">
+                        <div class="process-inner">
+                            <div class="icon-holder">
+                                <i class="icon-pencil"></i>
+                            </div>
+                            <h4 class="heading">Branding</h4>
+                            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- // process -->
+
+        <!-- experience -->
+        <div id="experience" class="experience section">
+            <div class="gradient"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 ">
+                        <div class="exp-block">
+                            <h3> <i class="icon-globe"></i> Work Experience</h3>
+                            <ul class="list-none">
+                                <li>
+                                    <h4>Mad Max Design</h4>
+                                    <span>OCT 2013 - june 2014</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                </li>
+                                <li>
+                                    <h4>Crazy Design</h4>
+                                    <p>OCT 2013 - june 2014</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="exp-block">
+                            <h3> <i class="icon-book-open"></i> Education</h3>
+                            <ul class="list-none">
+                                <li>
+                                    <h4>Maddison University</h4>
+                                    <p>OCT 2013 - june 2014</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                </li>
+                                <li>
+                                    <h4>Mad Max Design</h4>
+                                    <p>OCT 2013 - june 2014</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // experience -->
+
+        <!-- works -->
+        <div id="works" class="works section">
+            <div class="gradient"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title fadeInDown">
+                            <h2>My Latest Works</h2>
+                            <p>Hi, i’m Paul Lapkin, Experience Crafter from Canada.</p>
+                        </div>
+
+                        <div class="works-gallery">
+                            <div id="mygallery" >
+                                <div>
+                                    <img alt="" src="img/work/img-1.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-2.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-3.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-4.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-5.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-6.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img alt="" src="img/work/img-2.jpg"/>
+                                    <div class="item-musk">
+                                        <div class="item-caption">
+                                            <h4>Lorem ipsum dolor sit amet.</h4>
+                                            <p>Branding,Website Development,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- other images... -->
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                </div>
+            </div>
+        </div>
+        <!-- // works -->
+
+        <!-- testimonial -->
+        <div id="testimonial" class="testimonial">
+            <div class="dark-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="title fadeInDown">
+                        <h2>What By Beloved Client Says</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 ">
+                        <!-- Set up your HTML -->
+                        <div class="testimonial-slider">
+                          <div>
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquipex ea commodo consequat.
+                                </p>
+                                <span>Adward Smith</span>
+                                <div class="signature">
+                                    <img src="img/signature.png" alt="">
+                                </div>
+                          </div>
+                          <div>
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquipex ea commodo consequat.
+                                </p>
+                                <span>Adward Smith</span>
+                                <div class="signature">
+                                    <img src="img/signature.png" alt="">
+                                </div>
+                          </div>
+                        </div>
+
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // testimonial -->
+
+        <!-- contact -->
+        <div id="contact" class="contact section">
+            <div class="container">
+                <div class="row">
+                    <div class="title fadeInDown">
+                        <h2>Contact With Me</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nam ab dolor, <br> dignissimos dicta pariatur impedit earum enim quidem laborum.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8">
+                        <!-- <div class="exp-block">
+                            <h3>Leave a message</h3>
+                            <form action="#" class="contact-form clearfix">
+                                <div class="input-field">
+                                    <input type="text" name="name" placeholder="Name*" class="form-control">
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" name="email" placeholder="Email*" class="form-control">
+                                </div>
+                                <div class="input-field">
+                                    <textarea name="message" placeholder="Message*" class="form-control"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-theme-color pull-right">Send Message</button>
+                            </form>
+                        </div> -->
+                        <div  class="contact-form">
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="text" name="web" id="web" placeholder="Web">
+
+                            <textarea name="message" id="message" cols="30" rows="10" class="input-message" placeholder="Comment"></textarea>
+
+                            <button type="submit"  class="btn btn-theme-color">SEND</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="contact-info">
+                            <h4>CONTACT INFO</h4>
+                            <p>Explain to you how all this mistaken idea of denouncing a teachings of the great explorer of the truth</p>
+                        </div>
+                        <div class="contact-address">
+                            <h4>Address</h4>
+                            <ul>
+                                <li class="address">Road 35/4,<br>
+                                Themefisher,Dhaka<br>Bangladesh</li>
+
+                                <li class="phone">[ +00 ] 012 000 088</li>
+                                <li class="email">support@company.com</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // contact -->
+
+        <footer class="footer">
+            <div class="conainer text-center wow zoomIn">
+                <div class="social-icons clearfix">
+                    <a class="facebook" href="#">
+                        <i class="icon-facebook"></i> 
+                    </a>
+                   
+                    <a class="twitter" href="#">
+                        <i class="icon-twitter"></i> 
+                    </a>
+                 
+                    <a class="dribbble" href="#">
+                        <i class="icon-dribbble"></i> 
+                    </a>
+                
+                    <a class="linkedin" href="#">
+                        <i class="icon-linkedin"></i> 
+                    </a>
+                
+                    <a class="googleplus" href="#">
+                        <i class="icon-googleplus"></i>
+                    </a>
+                    
+                    
+                </div> 
+
+                <div class="copyright">
+                    <p>Copyright:Themefisher, All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                </div>
+            </div>
+        </footer>
 
 
-<div>
-	<h1>申请售后</h1>
-	
-	<h2>参数</h2>
-	
-	<table>
-		<tbody><tr><td>参数名</td> <td>说明    </td></tr>
-		<tr><td>type </td> <td>0 ：我的申请</td></tr>
-		<tr><td>type </td> <td>1 ：我要申请</td></tr>
-	</tbody></table>
-	
-    <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"0"}}</p>
-    
-    <button onclick="clickBtn(&#39;ask4service0&#39;)">我的申请</button>   
-	
-	
-    <p>openapp.toplife://virtual?params={"des":"ask4service","params":{"type":"1"}}</p>
-    
-    <button onclick="clickBtn(&#39;ask4service1&#39;)">我要申请</button>   
-</div>
+        <!--
+        JavaScripts
+        ========================== -->
+        
 
 
-<div>
-	<h1>打开首页</h1>
-	
-	<h2>参数</h2>
-	
-	<table>
-		<tbody><tr><td>参数名</td> <td>说明    </td></tr>
-		<tr><td>index </td> <td>0 为首页</td></tr>
-	</tbody></table>
-	
-    <p>openapp.toplife://virtual?params={"des":"home","params":{"index":0}}</p>
-    
-    <button onclick="clickBtn(&#39;home&#39;)">Home</button>   
-</div>
-
-<div>
-	<h1>商品详情页</h1>
-	
-	<h2>参数</h2>
-	
-    <p>openapp.toplife://virtual?params={"des":"detail","params":{"skuId":5085839}}</p>
-	
-    <button onclick="clickBtn(&#39;detail&#39;)">detail</button>
-
-</div>
-
-<div>
-	<h1>店铺页</h1>
-	
-	<h2>参数</h2>
-	
-    <p>openapp.toplife://virtual?params={"des":"shop","params":{"shop_page_id":716367}}</p>
-
-    <button onclick="clickBtn(&#39;shop&#39;)">shop</button>
-
-</div>
-
-<div>
-	<h1>店铺分类页</h1>
-	
-	<h2>参数</h2>
-	
-    <p>openapp.toplife://virtual?params={"des":"shopcategory","params":{"shopId":730441,"venderId":734154}}</p>
-
-    <button onclick="clickBtn(&#39;shopcategory&#39;)">shopcategory</button>
-
-</div>
-
-<div>
-	<h1>内嵌网页（cms）</h1>
-	
-	<h2>参数</h2>
-	
-    <p>openapp.toplife://virtual?params={"des":"web","params":{"url":"http://www.baidu.com/","title":"baidu"}}</p>
-   
-    <button onclick="clickBtn(&#39;web&#39;)">web</button>
-  
-</div>
-
-<div>
-	<h1>搜索页</h1>
-	
-	<h2>参数</h2>	
-	
-	<h2>keyword</h2>
-	
-	<h2>from</h2>
-	
-	<h2>shopId</h2>
-	<h2>venderId</h2>
-	
-	<h2>cid1</h2>
-	<h2>cid2</h2>
-	<h2>cid3</h2>
-	<h2>fid</h2>
-	<h2>cateName</h2>	
-	
-	<h2>batch</h2>
-	<h2>quota 从优惠券跳过来的满quota减discount</h2>
-	<h2>discount 从优惠券跳过来的满quota减discount</h2>
-
-    <p>openapp.toplife://virtual?params={"des":"search","params":{"keyword":"T恤"}}</p>
-
-    <button onclick="clickBtn(&#39;search&#39;)">关键词搜索</button>
-	
-	<p>openapp.toplife://virtual?params={"des":"search","params":{"from":"brand","venderId":"7677037","shopId":"1000094508"}}</p>
-	
-	<button onclick="clickBtn(&#39;search_brand&#39;)">搜索店铺商品</button>
-	
-	<p>openapp.toplife://virtual?params={"des":"search","params":{"from":"category","cid1":"1","cid2":"14240","cid3":"14240","fid":"14239","cateName":"男士服饰"}}</p>
-	
-	<button onclick="clickBtn(&#39;search_category&#39;)">类目搜索</button>
-   
-</div>
-
-
-<div>
-	<h1>首页（开普勒参数）</h1>
-	
-	<h2>参数</h2>	
-
-    <p>openapp.toplife://virtual?params={"des":"home","params":{"index":"0"},"kepler_param":{"source":"kepler-open","otherData":{"mopenbp5":"ceshi"},"channel":"7ac94770f7574f00a401657d8c9ac40d"},"unpl":"V_ceshishujuwuxiao"}</p>
-
-    <button onclick="clickBtn(&#39;kelper&#39;)">kelper</button>
-
-</div>
-
-<div>
-	<h1>购物车</h1>
-	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"cart"}</p>
-
-    <button onclick="clickBtn(&#39;cart&#39;)">cart</button>
-
-</div>
-
-<div>
-	<h1>分享</h1>
-	
-	<h2>参数</h2>	
-
-    <p>openapp.toplife://virtual?params={"des":"share","params":{"logoUrl":"","title":"徐卓和大黄","subTitle":"徐卓和大黄的分享","url":"http://www.baidu.com/"}}</p>
-
-    <button onclick="clickBtn(&#39;share&#39;)">share</button>
-
-</div>
-
-<div>
-	<h1>视频中心</h1>
-	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"videocenter"}</p>
- 
-    <button onclick="clickBtn(&#39;videocenter&#39;)">视频中心</button>
-  
-</div>
-
-<div>
-	<h1>回放页面</h1>
-	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"vod","params":{"roomNumber":"mstone_9119"}}</p>
- 
-    <button onclick="clickBtn(&#39;vod&#39;)">回放</button>
-  
-</div>
-
-<div>
-	<h1>直播页面</h1>
-	
-	<h2>参数  roomNumber  </h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"live","params":{"roomNumber":"53153"}}</p>
- 
-    <button onclick="clickBtn(&#39;live&#39;)">直播</button>
-  
-</div>
-
-<div>
-	<h1>视频播放器</h1>
-	
-	<h2>参数</h2>	
-	
-    <p>openapp.toplife://virtual?params={"des":"videoplay","params":{"url":"http://1251412368.vod2.myqcloud.com/vodtransgzp1251412368/4564972818608344618/v.f20.mp4"}}</p>
-
-    <button onclick="clickBtn(&#39;videoplay&#39;)">视频播放</button>
-
-</div>
-
-<div>
-	<h1>订单列表页</h1>
-	
-	<h2>参数</h2>	
-
-    <p>openapp.toplife://virtual?params={"des":"orderlist"}</p>
-
-    <button onclick="clickBtn(&#39;orderlist&#39;)">我的订单</button>
-
-</div>
-
-<div>
-	<h1>拨打电话</h1>
-	
-	<h2>参数</h2>	
-
-    <p>openapp.toplife://virtual?params={"des":"dail"，"params":{"tel":"4006183638"}}</p>
-
-    <button onclick="clickBtn(&#39;dail&#39;)">拨打电话</button>
-
-</div>
-
-<div>
-	<h1>扫一扫</h1>
-	
-	<h2>参数</h2>	
-
-    <p>openapp.toplife://virtual?params={"des":"scan"}</p>
-
-    <button onclick="clickBtn(&#39;scan&#39;)">扫一扫</button>
-
-</div>
-
-
-</body></html>
+        <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.justifiedGallery.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
